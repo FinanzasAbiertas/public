@@ -1,0 +1,47 @@
+{
+  "authorization_details": [
+    {
+      "type": "https://sfa.gob.pe/authorization/account-information",
+
+      "purpose": {
+        "code": "BAN-07",
+        "version": "1.0",
+        "description": "Gestión de finanzas personales"
+      },
+
+      "actions": [
+        "read"
+      ],
+
+      "permissions": [
+        "ACCOUNTS_READ",
+        "ACCOUNTS_BALANCES_READ",
+        "ACCOUNTS_TRANSACTIONS_READ"
+      ],
+
+      "resources": [
+        {
+          "type": "account",
+          "identifier": "ACC12345"
+        }
+      ],
+
+      "constraints": {
+        "transaction_history": {
+          "from": "2025-09-22",
+          "to": "2026-09-22"
+        }
+      },
+
+      "exclusions": [],
+
+      "validity": {
+        "expiresIndicator": true,
+        "recurringIndicator": true,
+        "frequency": "FREQ=DAILY;INTERVAL=1",
+        "validFrom": "2026-09-22T00:00:00Z",
+        "validTo": "2027-09-22T23:59:59Z"
+      }
+    }
+  ]
+}
